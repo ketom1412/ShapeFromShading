@@ -1,0 +1,47 @@
+{
+    "META": {
+        "AUTHOR": "Team A",
+        "DATE": "2017-02-12",
+        "DESCR": "Config file for shape from shading project"
+    },
+    "DATA": {
+        "FER_PATH": "../data/fer2013.csv",
+        "VERBOSE": True,
+        "TRAIN": {
+            "IMAGES": "../data/train_images.npy",
+            "LABELS": "../data/train_labels.npy"
+        },
+        "VALIDATION": {
+            "IMAGES": "../data/val_images.npy",
+            "LABELS": "../data/val_labels.npy"
+        },
+        "TEST": {
+            "IMAGES": "../data/test_images.npy",
+            "LABELS": "../data/test_labels.npy"
+        },
+        "ImageDirectoryTrain": "../input/train/color/",
+        "ImageDirectoryTrainMask": "../input/train/mask/",
+        "ImageDirectoryTrainOutput": "../input/train/normal/",
+        "ImageTrainCSV": "../data/train/color/imagetrain.csv",
+        "TestedImages": "../input/test/color/"
+    },
+    "TRAIN": {
+        "AUTOENCODER": {
+            "CHECKPOINT_OLD": "../checkpoints/autoencoder8x8.ckpt",
+            "CHECKPOINT": "../checkpoints/autoencoder4x4.ckpt",
+            "LEARNING_RATE": 0.0005,
+            "NB_STEPS": 1001,
+            "BATCH_SIZE": 1,
+        },
+        "CNN": {
+            "CHECKPOINT": "../checkpoints/cnn.ckpt",
+            "LEARNING_RATE": 0.0005,
+            "NB_STEPS": 1001,
+            "BATCH_SIZE": 1
+        }
+    },
+    "MODEL": {
+        "REPR_DIM": 16,
+        "SQRT_REPR_DIM": 4 
+    }
+}
